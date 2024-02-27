@@ -89,45 +89,45 @@ INSERT INTO TB_EQUIPAMENTO VALUES (
     TP_EQUIPAMENTO(20, 'Chuveiro', 'Construção', 'APAC')
 );
 /
--- tp engenheiro
-INSERT INTO tp_engenheiro VALUES (
-    '11111111111', 'Maria', 'F', 9876543210, 6000, TO_DATE('15/03/2005', 'DD/MM/YYYY'), TP_ENDERECO('Rua das Flores', 'Centro', 321, '12345-678'), especializacoes_v('Estrutural', 'Hidráulica'), 'Engenheiro de Obras', NULL
+-- tp engenheiro 
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('11111111111', 'Maria', 'F', 9876543210, 6000, TO_DATE('15/03/2005', 'DD/MM/YYYY'), TP_ENDERECO('Rua das Flores', 'Centro', 12, '12345-678'), especializacoes_v('Estrutural', 'Hidráulica'), 'Engenheiro de Obras', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '22222222222', 'Carlos', 'M', 9876543211, 5500, TO_DATE('20/05/2008', 'DD/MM/YYYY'), TP_ENDERECO('Av. Principal', 'Bairro A', 45, '54321-987'), especializacoes_v('Elétrica', 'Mecânica'), 'Engenheiro de Projetos', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('22222222222', 'Carlos', 'M', 9876543211, 5500, TO_DATE('20/05/2008', 'DD/MM/YYYY'), TP_ENDERECO('Av. Principal', 'Bairro A', 45, '54321-987'), especializacoes_v('Elétrica', 'Mecânica'), 'Engenheiro de Projetos', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '33333333333', 'Ana', 'F', 9876543212, 6500, TO_DATE('10/09/2010', 'DD/MM/YYYY'), TP_ENDERECO('Rua Principal', 'Centro', 78, '54321-123'), especializacoes_v('Civil', 'Ambiental'), 'Engenheiro de Produção', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('33333333333', 'Ana', 'F', 9876543212, 6500, TO_DATE('10/09/2010', 'DD/MM/YYYY'), TP_ENDERECO('Rua Principal', 'Centro', 78, '54321-123'), especializacoes_v('Civil', 'Ambiental'), 'Engenheiro de Produção', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '44444444444', 'Pedro', 'M', 9876543213, 7000, TO_DATE('25/11/2013', 'DD/MM/YYYY'), TP_ENDERECO('Av. Central', 'Bairro B', 101, '98765-432'), especializacoes_v('Estrutural', 'Geotécnica'), 'Engenheiro de Manutenção', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('44444444444', 'Pedro', 'M', 9876543213, 7000, TO_DATE('25/11/2013', 'DD/MM/YYYY'), TP_ENDERECO('Av. Central', 'Bairro B', 101, '98765-432'), especializacoes_v('Estrutural', 'Geotécnica'), 'Engenheiro de Manutenção', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '55555555555', 'Luiza', 'F', 9876543214, 6200, TO_DATE('05/04/2016', 'DD/MM/YYYY'), TP_ENDERECO('Rua das Palmeiras', 'Bairro C', 121, '12345-678'), especializacoes_v('Hidráulica', 'Elétrica'), 'Engenheiro Civil', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('55555555555', 'Luiza', 'F', 9876543214, 6200, TO_DATE('05/04/2016', 'DD/MM/YYYY'), TP_ENDERECO('Rua das Palmeiras', 'Bairro C', 121, '12345-678'), especializacoes_v('Hidráulica', 'Elétrica'), 'Engenheiro Civil', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '66666666666', 'Lucas', 'M', 9876543215, 5800, TO_DATE('17/07/2019', 'DD/MM/YYYY'), TP_ENDERECO('Av. dos Bandeirantes', 'Bairro D', 141, '54321-098'), especializacoes_v('Ambiental', 'Estrutural'), 'Engenheiro de Processos', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('66666666666', 'Lucas', 'M', 9876543215, 5800, TO_DATE('17/07/2019', 'DD/MM/YYYY'), TP_ENDERECO('Av. dos Bandeirantes', 'Bairro D', 141, '54321-098'), especializacoes_v('Ambiental', 'Estrutural'), 'Engenheiro de Processos', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '77777777777', 'Mariana', 'F', 9876543216, 6700, TO_DATE('22/10/2018', 'DD/MM/YYYY'), TP_ENDERECO('Rua dos Lírios', 'Centro', 161, '98765-432'), especializacoes_v('Mecânica', 'Ambiental'), 'Engenheiro de Segurança', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('77777777777', 'Mariana', 'F', 9876543216, 6700, TO_DATE('22/10/2018', 'DD/MM/YYYY'), TP_ENDERECO('Rua dos Lírios', 'Centro', 161, '98765-432'), especializacoes_v('Mecânica', 'Ambiental'), 'Engenheiro de Segurança', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '88888888888', 'Fernando', 'M', 9876543217, 6300, TO_DATE('12/12/2015', 'DD/MM/YYYY'), TP_ENDERECO('Av. das Árvores', 'Bairro E', 181, '12345-987'), especializacoes_v('Geotécnica', 'Elétrica'), 'Engenheiro de Planejamento', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('88888888888', 'Fernando', 'M', 9876543217, 6300, TO_DATE('12/12/2015', 'DD/MM/YYYY'), TP_ENDERECO('Av. das Árvores', 'Bairro E', 181, '12345-987'), especializacoes_v('Geotécnica', 'Elétrica'), 'Engenheiro de Planejamento', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '99999999999', 'Larissa', 'F', 9876543218, 6900, TO_DATE('30/01/2017', 'DD/MM/YYYY'), TP_ENDERECO('Rua dos Ipês', 'Bairro F', 202, '54321-678'), especializacoes_v('Civil', 'Mecânica'), 'Engenheiro Ambiental', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('99999999999', 'Larissa', 'F', 9876543218, 6900, TO_DATE('30/01/2017', 'DD/MM/YYYY'), TP_ENDERECO('Rua dos Ipês', 'Bairro F', 202, '54321-678'), especializacoes_v('Civil', 'Mecânica'), 'Engenheiro Ambiental', NULL)
 );
 /
-INSERT INTO tp_engenheiro VALUES (
-    '10101010101', 'Rafael', 'M', 9876543219, 6600, TO_DATE('08/08/2014', 'DD/MM/YYYY'), TP_ENDERECO('Rua das Ameixeiras', 'Bairro G', 222, '98765-098'), especializacoes_v('Elétrica', 'Geotécnica'), 'Engenheiro de Produção', NULL
+INSERT INTO tb_funcionario VALUES (
+    tp_engenheiro('10101010101', 'Rafael', 'M', 9876543219, 6600, TO_DATE('08/08/2014', 'DD/MM/YYYY'), TP_ENDERECO('Rua das Ameixeiras', 'Bairro G', 222, '98765-098'), especializacoes_v('Elétrica', 'Geotécnica'), 'Engenheiro de Produção', NULL)
 );
 /
 UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '22222222222') WHERE cpf = '11111111111';
