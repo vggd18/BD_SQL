@@ -68,29 +68,62 @@ CREATE OR REPLACE TYPE TP_CLIENTE AS OBJECT (
 );
 /
 */
-create or replace type tp_funcionario as object(
-    cpf varchar(11),
-    nome varchar(50),
-    sexo char,
-    telefone number,
-    salario number,
-    data_admiss date,
-    endereco tp_endereco
-) NOT FINAL NOT INSTANTIABLE;
+CREATE OR REPLACE TYPE tp_funcionario AS OBJECT (
+    cpf VARCHAR2(11),
+    nome VARCHAR2(50),
+    sexo CHAR,
+    telefone NUMBER,
+    salario NUMBER,
+    data_admiss DATE,
+    endereco tp_endereco,
+    MEMBER PROCEDURE display_info,
+    FINAL MEMBER PROCEDURE display_address
+) NOT FINAL NOT INSTANTIABLE  ;
+
+
+CREATE OR REPLACE TYPE BODY tp_funcionario AS
+    MEMBER PROCEDURE display_info IS
+    BEGIN
+        DBMS_OUTPUT.PUT_LINE('Nome: ' || nome);
+        DBMS_OUTPUT.PUT_LINE('CPF: ' || cpf);
+        DBMS_OUTPUT.PUT_LINE('Sexo: ' || sexo);
+        DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone);
+        DBMS_OUTPUT.PUT_LINE('Salário: ' || salario);
+        DBMS_OUTPUT.PUT_LINE('Data de Admissão: ' || TO_CHAR(data_admiss, 'DD/MM/YYYY'));
+    END;
+    
+    FINAL MEMBER PROCEDURE display_address IS
+    BEGIN
+        DBMS_OUTPUT.PUT_LINE('Nome: ' || nome);
+        DBMS_OUTPUT.PUT_LINE('Mora em ' || endereco.rua || ', ' || endereco.bairro || ', ' || endereco.numero || ', ' || endereco.cep);
+    END;
+END;
 /
 -- PEDREIRO
 CREATE OR REPLACE TYPE tp_pedreiro UNDER tp_funcionario (
     capacitacoes VARCHAR2(30)
 );
 /
- -- ENGENHEIRO
-CREATE OR REPLACE TYPE tp_engenherio UNDER tp_funcionario (
+-- O tipo engenheiro herda de funcionário
+CREATE OR REPLACE TYPE tp_engenheiro UNDER tp_funcionario (
     especializacao VARCHAR2(30),
-    cargo varchar2(30),
-    supervisiona REF tp_engenherio
+    cargo VARCHAR2(30),
+    OVERRIDING MEMBER PROCEDURE display_info
 );
 /
-
+CREATE OR REPLACE TYPE BODY tp_engenheiro AS
+    OVERRIDING MEMBER PROCEDURE display_info IS
+    BEGIN
+        DBMS_OUTPUT.PUT_LINE('Nome: ' || nome);
+        DBMS_OUTPUT.PUT_LINE('CPF: ' || cpf);
+        DBMS_OUTPUT.PUT_LINE('Sexo: ' || sexo);
+        DBMS_OUTPUT.PUT_LINE('Telefone: ' || telefone);
+        DBMS_OUTPUT.PUT_LINE('Salário: ' || salario);
+        DBMS_OUTPUT.PUT_LINE('Data de Admissão: ' || TO_CHAR(data_admiss, 'DD/MM/YYYY'));
+        DBMS_OUTPUT.PUT_LINE('Cargo: ' || cargo);
+    END;
+   
+END;
 
 
 /**
