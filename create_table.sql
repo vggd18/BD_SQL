@@ -32,3 +32,12 @@ CREATE TABLE TB_PROJETO OF TP_PROJETO (
     CODIGO_PROJETO PRIMARY KEY
 );
 /
+-- ENGENHEIRO
+CREATE TABLE TB_Engenheiro OF tp_engenheiro (
+    cpf PRIMARY KEY
+);
+
+-- PEDREIRO
+CREATE TABLE TB_Pedreiro OF tp_pedreiro (
+    cpf PRIMARY KEY
+);
