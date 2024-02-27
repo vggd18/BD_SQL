@@ -210,21 +210,13 @@ INSERT INTO tb_funcionario VALUES (
 /
 UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '22222222222') WHERE cpf = '11111111111';
 /
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '33333333333') WHERE cpf = '11111111111';
+UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '44444444444') WHERE cpf = '33333333333';
 /
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '44444444444') WHERE cpf = '11111111111';
+UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '66666666666') WHERE cpf = '55555555555';
 /
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '55555555555') WHERE cpf = '11111111111';
+UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '88888888888') WHERE cpf = '77777777777';
 /
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '66666666666') WHERE cpf = '11111111111';
-/
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '77777777777') WHERE cpf = '11111111111';
-/
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '88888888888') WHERE cpf = '11111111111';
-/
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '99999999999') WHERE cpf = '11111111111';
-/
-UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '10101010101') WHERE cpf = '11111111111';
+UPDATE tb_engenheiro SET supervisiona = (SELECT REF(e) FROM tb_engenheiro e WHERE e.cpf = '10101010101') WHERE cpf = '99999999999';
 /
 
 -- tp pedreiro
