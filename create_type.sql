@@ -70,3 +70,35 @@ CREATE OR REPLACE TYPE TP_CLIENTE AS OBJECT (
     RESPONSAVEL VARCHAR2(100)
 );
 /
+
+create or replace type tp_funcionario as object(
+    cpf varchar(11),
+    nome varchar(50),
+    sexo char,
+    telefone number,
+    salario number,
+    data_admiss date,
+    endereco tp_endereco
+) NOT FINAL NOT INSTANTIABLE;
+/
+
+CREATE OR REPLACE TYPE tp_pedreiro UNDER tp_funcionario (
+    capacitacoes VARCHAR2(30)
+);
+/
+
+CREATE OR REPLACE TYPE tp_engenherio UNDER tp_funcionario (
+    especializacao VARCHAR2(30),
+    cargo varchar2(30),
+    supervisiona REF tp_engenherio
+);
+/
+
+CREATE TYPE especializacoes_v AS VARRAY(10) OF VARCHAR2(30);
+/
+
+CREATE TYPE capacitacoes_v AS VARRAY(10) OF VARCHAR2(30);
+/
+
+CREATE TYPE fone_table_v AS VARRAY(11) OF NUMBER; 
+/
