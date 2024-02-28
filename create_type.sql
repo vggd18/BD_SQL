@@ -104,8 +104,20 @@ CREATE OR REPLACE TYPE tp_funcionario AS OBJECT (
     data_admiss DATE,
     endereco tp_endereco,
     MEMBER PROCEDURE display_info,
-    FINAL MEMBER PROCEDURE display_address
+    FINAL MEMBER PROCEDURE display_address,
+    MEMBER FUNCTION multiply_salary(p_multiplier NUMBER) RETURN NUMBER
 ) NOT FINAL NOT INSTANTIABLE;
+
+CREATE OR REPLACE TYPE BODY tp_funcionario AS
+    MEMBER FUNCTION multiply_salary(p_multiplier NUMBER) RETURN NUMBER IS
+    BEGIN
+        -- Multiply the 'salario' attribute by the given multiplier
+        salario := salario * p_multiplier;
+        RETURN salario;
+    END multiply_salary;
+    
+END;
+/
 
 
 CREATE OR REPLACE TYPE BODY tp_funcionario AS
