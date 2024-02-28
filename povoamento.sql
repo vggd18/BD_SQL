@@ -264,82 +264,174 @@ INSERT INTO tb_funcionario VALUES (
 --FORNECEDOR
 
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(1, 'Casa dos Materiais', TP_ENDERECO('Rua do Tigrinho', 'Centro', 1234, '12345-678'), varray_fone('11987654321', '11976543210'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('12345678901234', 'Casa dos Materiais', TP_ENDERECO('Rua do Tigrinho', 'Centro', 1234, '12345-678'), varray_fone('11987654321', '11976543210'), varray_ramo('Material de Construção', 'Ferragens'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(2, 'Jardim & Cia', TP_ENDERECO('Av. Principal', 'Jardim', 567, '23456-789'), varray_fone('21901234567', '21987654321'), varray_ramo('Móveis', 'Decoração'))
+    TP_FORNECEDOR('23456789012345', 'Jardim & Cia', TP_ENDERECO('Av. Principal', 'Jardim', 567, '23456-789'), varray_fone('21901234567', '21987654321'), varray_ramo('Móveis', 'Decoração'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(3, 'Ferragens Premium', TP_ENDERECO('Rua da Indústria', 'Industrial', 890, '34567-890'), varray_fone('81345678901', '81901234567'), varray_ramo('Iluminação'))
+    TP_FORNECEDOR('34567890123456', 'Ferragens Premium', TP_ENDERECO('Rua da Indústria', 'Industrial', 890, '34567-890'), varray_fone('81345678901', '81901234567'), varray_ramo('Iluminação'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(4, 'Construindo Sonhos', TP_ENDERECO('Rua Comercial', 'Comercial', 234, '45678-901'), varray_fone('82987654321', '82234567890'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('45678901234567', 'Construindo Sonhos', TP_ENDERECO('Rua Comercial', 'Comercial', 234, '45678-901'), varray_fone('82987654321', '82234567890'), varray_ramo('Material de Construção', 'Ferragens'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(5, 'Decor House', TP_ENDERECO('Av. da Praia', 'Beira-Mar', 5678, '56789-012'), varray_fone('51901234567', '51987654321'), varray_ramo('Decoração', 'Materiais Elétricos'))
+    TP_FORNECEDOR('56789012345678', 'Decor House', TP_ENDERECO('Av. da Praia', 'Beira-Mar', 5678, '56789-012'), varray_fone('51901234567', '51987654321'), varray_ramo('Decoração', 'Materiais Elétricos'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(6, 'Iluminação Moderna', TP_ENDERECO('Rua das Flores', 'Floresta', 9012, '67890-123'), varray_fone('41345678901', '41901234567'), varray_ramo('Material de Construção', 'Ferramentas'))
+    TP_FORNECEDOR('67890123456789', 'Iluminação Moderna', TP_ENDERECO('Rua das Flores', 'Floresta', 9012, '67890-123'), varray_fone('41345678901', '41901234567'), varray_ramo('Material de Construção', 'Ferramentas'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(7, 'Móveis Elegantes', TP_ENDERECO('Av. do Bosque', 'Bosque', 345, '78901-234'), varray_fone('87987654321', '87234567890'), varray_ramo('Decoração', 'Móveis'))
+    TP_FORNECEDOR('78901234567890', 'Móveis Elegantes', TP_ENDERECO('Av. do Bosque', 'Bosque', 345, '78901-234'), varray_fone('87987654321', '87234567890'), varray_ramo('Decoração', 'Móveis'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(8, 'Arte em Decoração', TP_ENDERECO('Rua dos Alpes', 'Montanha', 678, '89012-345'), varray_fone('11901234567', '11987654321'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('89012345678901', 'Arte em Decoração', TP_ENDERECO('Rua dos Alpes', 'Montanha', 678, '89012-345'), varray_fone('11901234567', '11987654321'), varray_ramo('Material de Construção', 'Ferragens'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(9, 'Casa Verde', TP_ENDERECO('Av. dos Lagos', 'Lagoa', 1234, '90123-456'), varray_fone('81345678901', '81901234567'), varray_ramo('Iluminação', 'Materiais Elétricos'))
+    TP_FORNECEDOR('90123456789012', 'Casa Verde', TP_ENDERECO('Av. dos Lagos', 'Lagoa', 1234, '90123-456'), varray_fone('81345678901', '81901234567'), varray_ramo('Iluminação', 'Materiais Elétricos'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(10, 'Estilo & Design', TP_ENDERECO('Rua das Pedras', 'Pedreira', 5678, '01234-567'), varray_fone('81987654321', '81234567890'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('10123456789012', 'Estilo & Design', TP_ENDERECO('Rua das Pedras', 'Pedreira', 5678, '01234-567'), varray_fone('81987654321', '81234567890'), varray_ramo('Material de Construção', 'Ferragens'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(11, 'Construindo Juntos', TP_ENDERECO('Av. dos Pinheiros', 'Floresta', 9012, '12345-678'), varray_fone('81901234567', '81987654321'), varray_ramo('Decoração', 'Móveis'))
+    TP_FORNECEDOR('11123456789012', 'Construindo Juntos', TP_ENDERECO('Av. dos Pinheiros', 'Floresta', 9012, '12345-678'), varray_fone('81901234567', '81987654321'), varray_ramo('Decoração', 'Móveis'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(12, 'Brilho e Estilo', TP_ENDERECO('Rua do Comércio', 'Centro', 345, '23456-789'), varray_fone('81345678901', '81901234567'), varray_ramo('Material de Construção', 'Ferramentas'))
+    TP_FORNECEDOR('12123456789012', 'Brilho e Estilo', TP_ENDERECO('Rua do Comércio', 'Centro', 345, '23456-789'), varray_fone('81345678901', '81901234567'), varray_ramo('Material de Construção', 'Ferramentas'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(13, 'Jardim das Flores', TP_ENDERECO('Av. das Palmeiras', 'Praia', 678, '34567-890'), varray_fone('71987654321', '71234567890'), varray_ramo('Decoração', 'Materiais Elétricos'))
+    TP_FORNECEDOR('13123456789012', 'Jardim das Flores', TP_ENDERECO('Av. das Palmeiras', 'Praia', 678, '34567-890'), varray_fone('71987654321', '71234567890'), varray_ramo('Decoração', 'Materiais Elétricos'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(14, 'Casa Nova', TP_ENDERECO('Rua das Violetas', 'Jardim', 1234, '45678-901'), varray_fone('71901234567', '71987654321'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('14123456789012', 'Casa Nova', TP_ENDERECO('Rua das Violetas', 'Jardim', 1234, '45678-901'), varray_fone('71901234567', '71987654321'), varray_ramo('Material de Construção', 'Ferragens'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(15, 'Ferramentas Úteis', TP_ENDERECO('Av. dos Ipês', 'Bosque', 5678, '56789-012'), varray_fone('21345678901', '21901234567'), varray_ramo('Iluminação', 'Materiais Elétricos'))
+    TP_FORNECEDOR('15123456789012', 'Ferramentas Úteis', TP_ENDERECO('Av. dos Ipês', 'Bosque', 5678, '56789-012'), varray_fone('21345678901', '21901234567'), varray_ramo('Iluminação', 'Materiais Elétricos'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(16, 'Ambiente Aconchegante', TP_ENDERECO('Rua dos Coqueiros', 'Comercial', 9012, '67890-123'), varray_fone('11987654321', '11234567890'), varray_ramo('Decoração', 'Móveis'))
+    TP_FORNECEDOR('16123456789012', 'Ambiente Aconchegante', TP_ENDERECO('Rua dos Coqueiros', 'Comercial', 9012, '67890-123'), varray_fone('11987654321', '11234567890'), varray_ramo('Decoração', 'Móveis'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(17, 'Tudo em Casa', TP_ENDERECO('Av. das Orquídeas', 'Floresta', 345, '78901-234'), varray_fone('61901234567', '61987654321'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('17123456789012', 'Tudo em Casa', TP_ENDERECO('Av. das Orquídeas', 'Floresta', 345, '78901-234'), varray_fone('61901234567', '61987654321'), varray_ramo('Material de Construção', 'Ferragens'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(18, 'Construindo lares', TP_ENDERECO('Rua das Magnólias', 'Montanha', 678, '89012-345'), varray_fone('51345678901', '51901234567'), varray_ramo('Iluminação', 'Materiais Elétricos'))
+    TP_FORNECEDOR('18123456789012', 'Construindo lares', TP_ENDERECO('Rua das Magnólias', 'Montanha', 678, '89012-345'), varray_fone('51345678901', '51901234567'), varray_ramo('Iluminação', 'Materiais Elétricos'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(19, 'Casa & Cia', TP_ENDERECO('Av. das Acácias', 'Lagoa', 1234, '90123-456'), varray_fone('81987654321', '81234567890'), varray_ramo('Decoração', 'Móveis'))
+    TP_FORNECEDOR('19123456789012', 'Casa & Cia', TP_ENDERECO('Av. das Acácias', 'Lagoa', 1234, '90123-456'), varray_fone('81987654321', '81234567890'), varray_ramo('Decoração', 'Móveis'))
 );
 /
 INSERT INTO TB_FORNECEDOR VALUES (
-    TP_FORNECEDOR(20, 'Mundo das Reformas', TP_ENDERECO('Rua das Margaridas', 'Pedreira', 5678, '01234-567'), varray_fone('81901234567', '81987654321'), varray_ramo('Material de Construção', 'Ferragens'))
+    TP_FORNECEDOR('20123456789012', 'Mundo das Reformas', TP_ENDERECO('Rua das Margaridas', 'Pedreira', 5678, '01234-567'), varray_fone('81901234567', '81987654321'), varray_ramo('Material de Construção', 'Ferragens'))
+);
+/
+
+--SOLICITA
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '11111111111'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 1),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = 1)
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '22222222222'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 2),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '12345678901234')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '33333333333'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 3),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '23456789012345')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '44444444444'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 4),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '34567890123456')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '55555555555'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 5),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '45678901234567')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '66666666666'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 6),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '56789012345678')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '77777777777'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 7),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '67890123456789')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '88888888888'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 8),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '78901234567890')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '99999999999'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 9),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '89012345678901')
+    )
+);
+/
+INSERT INTO TB_SOLICITA VALUES (
+    TP_SOLICITA(
+        TO_TIMESTAMP('2024-02-27 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+        (SELECT REF(e) FROM TB_ENGENHEIRO e WHERE e.cpf = '10101010101'), -- Substitua pelo CPF do engenheiro desejado
+        (SELECT REF(eq) FROM TB_EQUIPAMENTO eq WHERE eq.CODIGO_EQUIPAMENTO = 10),
+        (SELECT REF(f) FROM TB_FORNECEDOR f WHERE f.CNPJ_FORNECEDOR = '90123456789012')
+    )
 );
 /
