@@ -79,7 +79,7 @@ END;
 DECLARE 
     CONST_TP_IF TP_INSTITUICAO_FINANCEIRA;
 BEGIN
-    CONST_TP_IF := C_INSTITUICAO_FINANCEIRA('01111111111111', 'VITOLAS BANK', 'PUBLICO');
+    CONST_TP_IF := TP_INSTITUICAO_FINANCEIRA('01111111111111', 'VITOLAS BANK', 'PUBLICO');
 END;
 /
 
@@ -125,6 +125,7 @@ CREATE OR REPLACE TYPE tp_funcionario AS OBJECT (
     MEMBER FUNCTION multiply_salary(p_multiplier NUMBER) RETURN NUMBER
 ) NOT FINAL NOT INSTANTIABLE;
 /
+    
 CREATE OR REPLACE TYPE BODY tp_funcionario AS
     MEMBER FUNCTION multiply_salary(p_multiplier NUMBER) RETURN NUMBER IS
     BEGIN
@@ -132,10 +133,7 @@ CREATE OR REPLACE TYPE BODY tp_funcionario AS
         salario := salario * p_multiplier;
         RETURN salario;
     END multiply_salary;
-    
-END;
-/
-CREATE OR REPLACE TYPE BODY tp_funcionario AS
+
     MEMBER PROCEDURE display_info IS
     BEGIN
         DBMS_OUTPUT.PUT_LINE('Nome: ' || nome);
@@ -145,7 +143,7 @@ CREATE OR REPLACE TYPE BODY tp_funcionario AS
         DBMS_OUTPUT.PUT_LINE('Salário: ' || salario);
         DBMS_OUTPUT.PUT_LINE('Data de Admissão: ' || TO_CHAR(data_admiss, 'DD/MM/YYYY'));
     END;
-    
+
     FINAL MEMBER PROCEDURE display_address IS
     BEGIN
         DBMS_OUTPUT.PUT_LINE('Nome: ' || nome);
@@ -153,6 +151,7 @@ CREATE OR REPLACE TYPE BODY tp_funcionario AS
     END;
 END;
 /
+
 -- PEDREIRO
 CREATE OR REPLACE TYPE tp_pedreiro UNDER tp_funcionario (
     capacitacoes VARCHAR2(30)
