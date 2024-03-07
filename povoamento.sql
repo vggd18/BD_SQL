@@ -81,10 +81,162 @@ INSERT INTO TB_INSTITUICAO_FINANCEIRA VALUES (
 /
     
 -- INSERT CLIENTE
+-- Exemplo 1
 INSERT INTO TB_CLIENTE VALUES (
-    TP_CLIENTE('12345678901234', 'Empresa XYZ', 'João Silva')
+    '12345678901234', 
+    'Cliente A', 
+    'Responsável A', 
+    varray_fone('11111111111', '22222222222'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(1, 'Residencial', 10000, TIMESTAMP '2024-01-01 00:00:00', TIMESTAMP '2024-06-01 00:00:00', TP_ENDERECO('Rua A', 'Bairro A', 123, '12345678')),
+        TP_OBRA(2, 'Comercial', 15000, TIMESTAMP '2024-02-01 00:00:00', TIMESTAMP '2024-07-01 00:00:00', TP_ENDERECO('Rua B', 'Bairro B', 456, '87654321'))
+    )
 );
-/
+
+-- Exemplo 2
+INSERT INTO TB_CLIENTE VALUES (
+    '23456789012345', 
+    'Cliente B', 
+    'Responsável B', 
+    varray_fone('33333333333'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(3, 'Industrial', 20000, TIMESTAMP '2024-03-01 00:00:00', TIMESTAMP '2024-08-01 00:00:00', TP_ENDERECO('Rua C', 'Bairro C', 789, '13579246'))
+    )
+);
+
+-- Exemplo 3
+INSERT INTO TB_CLIENTE VALUES (
+    '34567890123456', 
+    'Cliente C', 
+    'Responsável C', 
+    varray_fone('44444444444', '55555555555'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(4, 'Residencial', 18000, TIMESTAMP '2024-04-01 00:00:00', TIMESTAMP '2024-09-01 00:00:00', TP_ENDERECO('Rua D', 'Bairro D', 1011, '24681357'))
+    )
+);
+
+-- Exemplo 4
+INSERT INTO TB_CLIENTE VALUES (
+    '45678901234567', 
+    'Cliente D', 
+    'Responsável D', 
+    varray_fone('66666666666'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(5, 'Comercial', 25000, TIMESTAMP '2024-05-01 00:00:00', TIMESTAMP '2024-10-01 00:00:00', TP_ENDERECO('Rua E', 'Bairro E', 1213, '98765432'))
+    )
+);
+
+-- Exemplo 5
+INSERT INTO TB_CLIENTE VALUES (
+    '56789012345678', 
+    'Cliente E', 
+    'Responsável E', 
+    varray_fone('77777777777', '88888888888'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(6, 'Residencial', 30000, TIMESTAMP '2024-06-01 00:00:00', TIMESTAMP '2024-11-01 00:00:00', TP_ENDERECO('Rua F', 'Bairro F', 1415, '36925814')),
+        TP_OBRA(7, 'Comercial', 35000, TIMESTAMP '2024-07-01 00:00:00', TIMESTAMP '2024-12-01 00:00:00', TP_ENDERECO('Rua G', 'Bairro G', 1617, '14725836'))
+    )
+);
+
+-- Exemplo 6
+INSERT INTO TB_CLIENTE VALUES (
+    '67890123456789', 
+    'Cliente F', 
+    'Responsável F', 
+    varray_fone('99999999999'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(8, 'Residencial', 28000, TIMESTAMP '2024-08-01 00:00:00', TIMESTAMP '2025-01-01 00:00:00', TP_ENDERECO('Rua H', 'Bairro H', 1819, '12398765')),
+        TP_OBRA(9, 'Comercial', 32000, TIMESTAMP '2024-09-01 00:00:00', TIMESTAMP '2025-02-01 00:00:00', TP_ENDERECO('Rua I', 'Bairro I', 2021, '98712365'))
+    )
+);
+
+-- Exemplo 7
+INSERT INTO TB_CLIENTE VALUES (
+    '78901234567890', 
+    'Cliente G', 
+    'Responsável G', 
+    varray_fone('11111111111', '22222222222', '33333333333'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(10, 'Industrial', 40000, TIMESTAMP '2024-10-01 00:00:00', TIMESTAMP '2025-03-01 00:00:00', TP_ENDERECO('Rua J', 'Bairro J', 2223, '15926374'))
+    )
+);
+
+-- Exemplo 8
+INSERT INTO TB_CLIENTE VALUES (
+    '89012345678901', 
+    'Cliente H', 
+    'Responsável H', 
+    varray_fone('44444444444'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(11, 'Residencial', 27000, TIMESTAMP '2024-11-01 00:00:00', TIMESTAMP '2025-04-01 00:00:00', TP_ENDERECO('Rua K', 'Bairro K', 2425, '75395182'))
+    )
+);
+
+-- Exemplo 9
+INSERT INTO TB_CLIENTE VALUES (
+    '90123456789012', 
+    'Cliente I', 
+    'Responsável I', 
+    varray_fone('55555555555', '66666666666'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(12, 'Comercial', 30000, TIMESTAMP '2024-12-01 00:00:00', TIMESTAMP '2025-05-01 00:00:00', TP_ENDERECO('Rua L', 'Bairro L', 2627, '36985214'))
+    )
+);
+-- Exemplo 16
+INSERT INTO TB_CLIENTE VALUES (
+    '43210987654321', 
+    'Cliente P', 
+    'Responsável P', 
+    varray_fone('99999999999'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(19, 'Comercial', 45000, TIMESTAMP '2025-07-01 00:00:00', TIMESTAMP '2025-12-01 00:00:00', TP_ENDERECO('Rua S', 'Bairro S', 4041, '36914725'))
+    )
+);
+
+-- Exemplo 17
+INSERT INTO TB_CLIENTE VALUES (
+    '32109876543210', 
+    'Cliente Q', 
+    'Responsável Q', 
+    varray_fone('11111111111', '22222222222'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(20, 'Industrial', 48000, TIMESTAMP '2025-08-01 00:00:00', TIMESTAMP '2026-01-01 00:00:00', TP_ENDERECO('Rua T', 'Bairro T', 4243, '85296374'))
+    )
+);
+
+-- Exemplo 18
+INSERT INTO TB_CLIENTE VALUES (
+    '21098765432109', 
+    'Cliente R', 
+    'Responsável R', 
+    varray_fone('33333333333'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(21, 'Residencial', 42000, TIMESTAMP '2025-09-01 00:00:00', TIMESTAMP '2026-02-01 00:00:00', TP_ENDERECO('Rua U', 'Bairro U', 4445, '14725836'))
+    )
+);
+
+-- Exemplo 19
+INSERT INTO TB_CLIENTE VALUES (
+    '10987654321098', 
+    'Cliente S', 
+    'Responsável S', 
+    varray_fone('44444444444', '55555555555'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(22, 'Comercial', 46000, TIMESTAMP '2025-10-01 00:00:00', TIMESTAMP '2026-03-01 00:00:00', TP_ENDERECO('Rua V', 'Bairro V', 4647, '36914725'))
+    )
+);
+
+-- Exemplo 20
+INSERT INTO TB_CLIENTE VALUES (
+    '09876543210987', 
+    'Cliente T', 
+    'Responsável T', 
+    varray_fone('66666666666'), 
+    TP_NESTED_OBRA(
+        TP_OBRA(23, 'Residencial', 44000, TIMESTAMP '2025-11-01 00:00:00', TIMESTAMP '2026-04-01 00:00:00', TP_ENDERECO('Rua W', 'Bairro W', 4849, '96325874'))
+    )
+);
+
 
 -- INSERT EQUIPAMENTO
 INSERT INTO TB_EQUIPAMENTO VALUES (
