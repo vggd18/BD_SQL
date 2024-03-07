@@ -31,13 +31,15 @@ CREATE TABLE TB_SOLICITA OF TP_SOLICITA(
 );
 /
 
-
+------------------------------------------------------------------------- missing select keyword
 CREATE TABLE TB_OBRA AS TABLE OF TP_NESTED_OBRA(
     COD PRIMARY KEY,
 )NESTED TABLE STORE AS TP_OBRA_NESTED;
 /
 
 -- TABELA CLIENTE
+------------------------------------------------------------------------------ problema: must specify table name for nested table column or attribute 
+------------------------------------------------------------------  um dos atributos de cliente é um objeto do tipo tp_nested_obra, deve ser isso
 CREATE TABLE TB_CLIENTE OF TP_CLIENTE (
     CNPJ_C PRIMARY KEY
 );
@@ -54,11 +56,12 @@ CREATE TABLE TB_Pedreiro OF tp_pedreiro (
 );
 /
 
+-----------------------------------------------------------------------tambem tá gerando erro, acho que ajeitando tb_obra resolve
 -- PROJETO
 CREATE TABLE TB_PROJETO OF TP_PROJETO (
-    CODIGO_PROJETO PRIMARY KEY
-    cliente SCOPE IS TB_ENGENHEIRO NOT NULL,
-    cliente SCOPE IS TB_INSTITUICAO_FINANCEIRA NOT NULL, 
-    cliente SCOPE IS TB_OBRA NOT NULL
+    CODIGO_PROJETO PRIMARY KEY,
+    CPF_ENGENHEIRO SCOPE IS TB_ENGENHEIRO NOT NULL,
+    CNPJ_CLIENTE SCOPE IS TB_OBRA NOT NULL,
+    CNPJ_INSTITUICAO SCOPE IS TB_INSTITUICAO_FINANCEIRA NOT NULL
 );
 /
