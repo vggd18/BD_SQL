@@ -43,5 +43,19 @@ FETCH FIRST ROW ONLY;
 SELECT c.CNPJ_C, obra.COD
 FROM TB_CLIENTE c, TABLE(c.OBRA) obra;
 
--- CONSULTA A MÉDIA DOS SALÁRIOS DOS ENGENHEIROS
-SELECT AVG(salario) AS media_salarial FROM TB_ENGENHEIRO;
+-- consulta fornecedores distintos que receberam solicitações de algum engenheiro
+SELECT DISTINCT f.*
+FROM TP_SOLICITA s
+JOIN TP_ENGENHEIRO e ON s.ENGENHEIRO = REF(e)
+JOIN TB_FORNECEDOR f ON DEREF(s.FORNECEDOR) = f;
+
+-- Seleciona os pedreiros admitidos após uma determinada data e ordena pelo salário em ordem decrescente:
+SELECT *
+FROM TB_PEDREIRO
+WHERE data_admiss > TO_DATE('2024-01-01', 'YYYY-MM-DD')
+ORDER BY salario DESC;
+
+-- Conta o número total de instituições financeiras por setor:
+SELECT SETOR, COUNT(*) AS total_instituicoes
+FROM TB_INSTITUICAO_FINANCEIRA
+GROUP BY SETOR;
