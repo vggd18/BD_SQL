@@ -158,6 +158,33 @@ CREATE OR REPLACE TYPE tp_pedreiro UNDER tp_funcionario (
     capacitacoes capacitacoes_v
 );
 /
+-- função para criar novo pedreiro na base
+CREATE OR REPLACE FUNCTION create_tp_pedreiro(
+    p_cpf VARCHAR2,
+    p_nome VARCHAR2,
+    p_sexo CHAR,
+    p_telefone varray_fone,
+    p_salario NUMBER,
+    p_data_admiss DATE,
+    p_endereco tp_endereco,
+    p_capacitacoes capacitacoes_v
+) RETURN tp_pedreiro AS
+    v_pedreiro tp_pedreiro;
+BEGIN
+    v_pedreiro := tp_pedreiro(
+        p_cpf,
+        p_nome,
+        p_sexo,
+        p_telefone,
+        p_salario,
+        p_data_admiss,
+        p_endereco,
+        p_capacitacoes
+    );
+    RETURN v_pedreiro;
+END;
+/
+
 -- O tipo engenheiro herda de funcionário
 CREATE OR REPLACE TYPE tp_engenheiro UNDER tp_funcionario (
     especializacao especializacoes_v,
