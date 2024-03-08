@@ -6,7 +6,7 @@ VARRAYS E MULTIVALORADOS
 CREATE OR REPLACE TYPE TP_ENDERECO AS OBJECT (
 	rua VARCHAR2(50),
 	bairro VARCHAR2(25),
-	numero NUMBER,
+	numero varchar2(6),
 	cep VARCHAR2(8)
 );
 /
@@ -92,7 +92,6 @@ BEGIN
     CONST_TP_IF := TP_INSTITUICAO_FINANCEIRA('01111111111111', 'VITOLAS BANK', 'PUBLICO');
 END;
 /
-
 -- FORNECEDOR
 CREATE OR REPLACE TYPE TP_FORNECEDOR AS OBJECT (
     CNPJ_FORNECEDOR VARCHAR2(14),
@@ -122,13 +121,11 @@ CREATE OR REPLACE TYPE TP_CLIENTE AS OBJECT (
 );
 /
 
-
-
 CREATE OR REPLACE TYPE tp_funcionario AS OBJECT (
     cpf VARCHAR2(11),
     nome VARCHAR2(50),
     sexo CHAR,
-    telefone NUMBER,
+    telefone varray_fone,
     salario NUMBER,
     data_admiss DATE,
     endereco tp_endereco,
@@ -166,13 +163,14 @@ END;
 
 -- PEDREIRO
 CREATE OR REPLACE TYPE tp_pedreiro UNDER tp_funcionario (
-    capacitacoes VARCHAR2(30)
+    capacitacoes capacitacoes_v
 );
 /
 -- O tipo engenheiro herda de funcionário
 CREATE OR REPLACE TYPE tp_engenheiro UNDER tp_funcionario (
-    especializacao VARCHAR2(30),
+    especializacao especializacoes_v,
     cargo VARCHAR2(30),
+    supervisor REF tp_engenheiro,
     OVERRIDING MEMBER PROCEDURE display_info
 );
 /
@@ -200,13 +198,19 @@ CREATE OR REPLACE TYPE TP_PROJETO AS OBJECT (
     CPF_ENGENHEIRO REF tp_engenheiro,
     CNPJ_CLIENTE REF TP_CLIENTE,
     CNPJ_INSTITUICAO REF TP_INSTITUICAO_FINANCEIRA,
-    ORDER MEMBER FUNCTION order_by_codigo_projeto RETURN VARCHAR2
+    ORDER MEMBER FUNCTION order_by_codigo_projeto (other TP_PROJETO) RETURN INTEGER
 );
 /
 CREATE OR REPLACE TYPE BODY TP_PROJETO AS
-    ORDER MEMBER FUNCTION order_by_codigo_projeto RETURN VARCHAR2 IS
+    ORDER MEMBER FUNCTION order_by_codigo_projeto (other TP_PROJETO) RETURN INTEGER IS
     BEGIN
-        RETURN CODIGO_PROJETO;
+        IF CODIGO_PROJETO > other.CODIGO_PROJETO THEN
+            RETURN 1;
+        ELSIF CODIGO_PROJETO = other.CODIGO_PROJETO THEN
+            RETURN 0;
+        ELSE
+            RETURN -1;
+        END IF;
     END order_by_codigo_projeto;
 END;
 /
