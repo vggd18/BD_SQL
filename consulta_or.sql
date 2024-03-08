@@ -55,3 +55,7 @@ FROM TB_PEDREIRO
 WHERE data_admiss > TO_DATE('2024-01-01', 'YYYY-MM-DD')
 ORDER BY salario DESC;
 
+-- Conta o número total de instituições financeiras por setor:
+SELECT SETOR, COUNT(*) AS total_instituicoes
+FROM TB_INSTITUICAO_FINANCEIRA
+GROUP BY SETOR;
