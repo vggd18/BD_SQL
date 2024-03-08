@@ -45,3 +45,9 @@ FROM TB_CLIENTE c, TABLE(c.OBRA) obra;
 
 -- CONSULTA A MÉDIA DOS SALÁRIOS DOS ENGENHEIROS
 SELECT AVG(salario) AS media_salarial FROM TB_ENGENHEIRO;
+
+-- consulta fornecedores distintos que receberam solicitações de algum engenheiro
+SELECT DISTINCT f.*
+FROM TP_SOLICITA s
+JOIN TP_ENGENHEIRO e ON s.ENGENHEIRO = REF(e)
+JOIN TB_FORNECEDOR f ON DEREF(s.FORNECEDOR) = f;
