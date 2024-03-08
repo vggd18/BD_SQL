@@ -38,10 +38,6 @@ CREATE TABLE TB_CLIENTE OF TP_CLIENTE (
 ) NESTED TABLE OBRA STORE AS TB_OBRA_NESTED;
 /
 
-
-
-
--- TABELA SOLICITA || ORA-00922: missing or invalid option 
 CREATE TABLE TB_SOLICITA OF TP_SOLICITA(
     data_hora PRIMARY KEY,
     ENGENHEIRO WITH ROWID REFERENCES TB_ENGENHEIRO,
@@ -49,8 +45,7 @@ CREATE TABLE TB_SOLICITA OF TP_SOLICITA(
     FORNECEDOR WITH ROWID REFERENCES TB_FORNECEDOR
 );
 /
-/**
------------------------------------------------------------------------tambem tá gerando erro, acho que ajeitando tb_obra resolve
+/*
 -- PROJETO
 CREATE TABLE TB_PROJETO OF TP_PROJETO (
     CODIGO_PROJETO PRIMARY KEY,
