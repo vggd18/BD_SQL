@@ -13,6 +13,10 @@ FROM TB_CLIENTE c,
 SELECT DEREF(s.ENGENHEIRO).nome AS NOME_ENGENHEIRO, DEREF(s.EQUIPAMENTO).nome AS NOME_EQUIPAMENTO, DEREF(s.FORNECEDOR).nome AS NOME_FORNECEDOR
 FROM TB_SOLICITA s;
 
+-- consulta supervisor de um dado engenheiro
+SELECT e.nome AS engenheiro_nome, DEREF(e.supervisor).nome AS supervisor_nome
+FROM TB_Engenheiro e
+WHERE e.cpf = '04444444401';
 
 
 -- CONSULTA A QUANTIDADE DE IF's PARA CADA SETOR
